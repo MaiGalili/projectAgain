@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stayles.css">
+    <title>Phone Book</title>
+</head>
+
+<body>
+    <header>
+        <h1>Phone Book</h1>
+        <button onclick="popupAdd()">Add new</button>
+        <input type="search" id="search" placeholder="search User" > 
+        <button onclick="deleteAll()">Delete All</button>
+        
+    </header>
+    <main>
+        <ul id ="phonelist"></ul>
+        <div class="modal" id="myModal" onclick="closeModal(event)">
+            <div class="modal-content">
+              <button class="close-btn" id="closeModalBtn" onclick="closeModal(event)">&times;</button>
+              <h2>Edit User</h2>
+              <p></p>
+              <input type="text" id="inputUserName">
+              <input type="tel" id="inputUserPhone">
+              <input type="text" id="inputUserAddress">
+              <input type="text" id="inputUserEmail">
+              <input type="text" id="inputUserFreeText">
+              <button id="getinput" onclick="Edit()" >Edit</button>
+       
+            </div>
+          </div>
+          <ul id ="Addlist"></ul>
+        <div class="modal" id="ModalAdd" onclick="closeModal(event)">
+            <div class="modal-content">
+              <button class="close-btn" id="closeModalAdd" onclick="closeModalAdd(event)">&times;</button>
+              <h2>Add User </h2>
+              <p></p>
+              <input type="text" id="inputUserNameAdd" placeholder="Add Name">
+              <input type="tel" id="inputUserPhoneAdd" placeholder="Add Phone">
+              <input type="text" id="inputUserAddressAdd" placeholder="Add Address">
+              <input type="text" id="inputUserEmailAdd" placeholder="Add Email">
+              <input type="text" id="inputUserFreeTextAdd" placeholder="Add Free Text">
+              <button id="getnewinput" onclick="newAdd()" >Add User</button>
+       
+            </div>
+          </div>
+    </main>
+    <footer>
+        <p>Mai Galili and Aviel Malka 2024</p>
+    </footer>
+    <script src="./js.js"></script>
+</body>
+
+</html>
